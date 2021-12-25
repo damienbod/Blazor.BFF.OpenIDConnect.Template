@@ -36,8 +36,7 @@ Add the OpenID Connect App registration settings
   "OpenIDConnectSettings": {
     "Authority": "--your-authority--",
     "ClientId": "--client ID--",
-    "ClientSecret": "--client-secret (user secrets)--",
-    "CallbackPath": "/signin-oidc"
+    "ClientSecret": "--client-secret (user secrets)--"
   },
 ```
 
