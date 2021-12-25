@@ -86,3 +86,9 @@ Where `<PATH>` is the path to the folder containing .template.config.
 - NetEscapades.AspNetCore.SecurityHeaders
 
 ## Links
+
+https://documentation.openiddict.com/
+
+https://auth0.com/
+
+https://www.keycloak.org/
