@@ -1,0 +1,17 @@
+{
+    "author": "damienbod",
+    "classifications": [
+        "AspNetCore",
+        "WASM",
+        "OpenIDConnect",
+		"OAuth2"
+    ],
+    "name": "ASP.NET Core Blazor BFF hosted WASM OpenID Connect",
+    "identity": "Blazor.BFF.OpenIDConnect.Template",
+    "shortName": "blazorbffoidc",
+    "tags": {
+        "language": "C#"
+    },
+    "sourceName": "BlazorBffOpenIDConnect",
+    "preferNameDirectory": "true"
+}
