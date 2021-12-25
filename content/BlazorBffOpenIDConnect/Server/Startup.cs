@@ -32,7 +32,8 @@ namespace Blazor.BFF.OpenIDConnect.Server
             services.AddHttpClient();
             services.AddOptions();
 
-            // todo get configuation from app settings
+            var openIDConnectSettings = Configuration.GetSection("OpenIDConnectSettings");
+
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -42,10 +43,10 @@ namespace Blazor.BFF.OpenIDConnect.Server
            .AddOpenIdConnect(options =>
            {
                options.SignInScheme = "Cookies";
-               options.Authority = "https://localhost:44395";
+               options.Authority = openIDConnectSettings["Authority"];
+               options.ClientId = openIDConnectSettings["ClientId"];
+               options.ClientSecret = openIDConnectSettings["ClientSecret"];
                options.RequireHttpsMetadata = true;
-               options.ClientId = "blazorcodeflowpkceclient";
-               options.ClientSecret = "codeflow_pkce_client_secret";
                options.ResponseType = "code";
                options.UsePkce = true;
                options.Scope.Add("profile");
