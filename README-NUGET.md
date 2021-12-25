@@ -51,6 +51,3 @@ dotnet new -u Blazor.BFF.OpenIDConnect.Template
 ## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
-
-## Links
-
