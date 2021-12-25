@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBffAzureAD.Server", "Server\BlazorBffAzureAD.Server.csproj", "{37DFADAA-3CEC-4DC2-919F-D721E6762108}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.BFF.OpenIDConnect.Shared", "Shared\Blazor.BFF.OpenIDConnect.Shared.csproj", "{CFDA20EC-841D-4A9C-A95C-2C674DA96F23}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBffAzureAD.Shared", "Shared\BlazorBffAzureAD.Shared.csproj", "{65DEEE1B-8DEB-4732-9025-3325135D81F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.BFF.OpenIDConnect.Server", "Server\Blazor.BFF.OpenIDConnect.Server.csproj", "{74A2A84B-C3B8-499F-80ED-093854CABDEA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBffAzureAD.Client", "Client\BlazorBffAzureAD.Client.csproj", "{A3764333-AB8E-4899-A796-3FDAE76A3A0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.BFF.OpenIDConnect.Client", "Client\Blazor.BFF.OpenIDConnect.Client.csproj", "{BD70F728-398A-4A88-A7C7-A3D9B78B5AE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{37DFADAA-3CEC-4DC2-919F-D721E6762108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37DFADAA-3CEC-4DC2-919F-D721E6762108}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37DFADAA-3CEC-4DC2-919F-D721E6762108}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37DFADAA-3CEC-4DC2-919F-D721E6762108}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65DEEE1B-8DEB-4732-9025-3325135D81F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65DEEE1B-8DEB-4732-9025-3325135D81F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65DEEE1B-8DEB-4732-9025-3325135D81F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65DEEE1B-8DEB-4732-9025-3325135D81F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3764333-AB8E-4899-A796-3FDAE76A3A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3764333-AB8E-4899-A796-3FDAE76A3A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3764333-AB8E-4899-A796-3FDAE76A3A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3764333-AB8E-4899-A796-3FDAE76A3A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFDA20EC-841D-4A9C-A95C-2C674DA96F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFDA20EC-841D-4A9C-A95C-2C674DA96F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFDA20EC-841D-4A9C-A95C-2C674DA96F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFDA20EC-841D-4A9C-A95C-2C674DA96F23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74A2A84B-C3B8-499F-80ED-093854CABDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A2A84B-C3B8-499F-80ED-093854CABDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A2A84B-C3B8-499F-80ED-093854CABDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A2A84B-C3B8-499F-80ED-093854CABDEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD70F728-398A-4A88-A7C7-A3D9B78B5AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD70F728-398A-4A88-A7C7-A3D9B78B5AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD70F728-398A-4A88-A7C7-A3D9B78B5AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD70F728-398A-4A88-A7C7-A3D9B78B5AE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

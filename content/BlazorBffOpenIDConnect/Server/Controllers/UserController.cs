@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
-using Blazor.BFF.OpenIddict.Shared.Authorization;
+using Blazor.BFF.OpenIDConnect.Shared.Authorization;
 using IdentityModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Blazor.BFF.OpenIddict.Server.Controllers
+namespace Blazor.BFF.OpenIDConnect.Server.Controllers
 {
     // orig src https://github.com/berhir/BlazorWebAssemblyCookieAuth
     [Route("api/[controller]")]

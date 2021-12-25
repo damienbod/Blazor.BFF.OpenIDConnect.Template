@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Blazor.BFF.OpenIddict.Server.Controllers
+namespace Blazor.BFF.OpenIDConnect.Server.Controllers
 {
     [ValidateAntiForgeryToken]
     [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]

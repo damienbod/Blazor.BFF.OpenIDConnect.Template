@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Blazor.BFF.OpenIddict.Server
+namespace Blazor.BFF.OpenIDConnect.Server
 {
     public class Startup
     {
@@ -82,7 +82,7 @@ namespace Blazor.BFF.OpenIddict.Server
 
             app.UseSecurityHeaders(
                 SecurityHeadersDefinitions.GetHeaderPolicyCollection(env.IsDevelopment(),
-                    Configuration["OidcSettings:Authority"]));
+                    Configuration["OpenIDConnectSettings:Authority"]));
 
             app.UseHttpsRedirection();
             app.UseBlazorFrameworkFiles();

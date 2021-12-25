@@ -1,4 +1,4 @@
-﻿namespace Blazor.BFF.OpenIddict.Shared.Authorization
+﻿namespace Blazor.BFF.OpenIDConnect.Shared.Authorization
 {
     public class ClaimValue
     {
