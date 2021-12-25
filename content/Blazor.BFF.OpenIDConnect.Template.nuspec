@@ -15,7 +15,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<copyright>2021 damienbod</copyright>
 		<summary>This template provides a simple Blazor template with BFF server authentication WASM hosted</summary>
-		<releaseNotes>Removed static host file, updated Nuget packages</releaseNotes>
+		<releaseNotes>Initial release</releaseNotes>
 		<repository type="git" url="https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template" />
 		<packageTypes>
 			<packageType name="Template" />
