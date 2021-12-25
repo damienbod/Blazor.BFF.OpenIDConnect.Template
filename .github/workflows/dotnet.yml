@@ -19,6 +19,6 @@ jobs:
         dotnet-version: '6.0'
         include-prerelease: True
     - name: Restore dependencies
-      run: dotnet restore ./content/BlazorBffAzureAD/Server
+      run: dotnet restore ./content/BlazorBffOpenIDConnect/Server
     - name: Build STS
-      run: dotnet build ./content/BlazorBffAzureAD/Server/BlazorBffAzureAD.Server.csproj --no-restore
+      run: dotnet build ./content/BlazorBffOpenIDConnect/Server/Blazor.BFF.OpenIDConnect.Server.csproj --no-restore
