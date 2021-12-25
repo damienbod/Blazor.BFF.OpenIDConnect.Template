@@ -53,8 +53,7 @@ namespace Blazor.BFF.OpenIDConnect.Server
                options.Scope.Add("offline_access");
                options.SaveTokens = true;
                options.GetClaimsFromUserInfoEndpoint = true;
-               options.ClaimActions.MapUniqueJsonKey("preferred_username", "preferred_username");
-               options.ClaimActions.MapUniqueJsonKey("gender", "gender");
+               // options.ClaimActions.MapUniqueJsonKey("preferred_username", "preferred_username");
            });
 
            services.AddControllersWithViews(options =>
