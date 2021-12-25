@@ -4,7 +4,7 @@
 
 **2021-12-25** 1.0.0
 - Initial release 
-- Azure AD authentication using OpenID Connect
+- Blazor authentication using OpenID Connect
 - ASP.NET Core 6
 
 
