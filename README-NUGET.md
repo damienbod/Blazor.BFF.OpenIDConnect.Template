@@ -33,7 +33,7 @@ Add the OpenID Connect App registration settings
 
 ```
 {
-  "OidcSettings": {
+  "OpenIDConnectSettings": {
     "Authority": "--your-authority--",
     "ClientId": "--client ID--",
     "ClientSecret": "--client-secret (user secrets)--",

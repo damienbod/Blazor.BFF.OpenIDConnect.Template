@@ -39,7 +39,7 @@ Use the `-n` or `--name` parameter to change the name of the output created. Thi
 Add the OpenID Connect registration settings
 
 ```
-"OidcSettings": {
+"OpenIDConnectSettings": {
     "Authority": "--your-authority--",
     "ClientId": "--client ID--",
     "ClientSecret": "--client-secret (user secrets)--",
