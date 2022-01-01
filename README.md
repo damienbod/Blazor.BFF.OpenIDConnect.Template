@@ -93,3 +93,5 @@ https://documentation.openiddict.com/
 https://auth0.com/
 
 https://www.keycloak.org/
+
+https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders

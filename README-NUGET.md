@@ -52,3 +52,7 @@ dotnet new -u Blazor.BFF.OpenIDConnect.Template
 
 - NetEscapades.AspNetCore.SecurityHeaders
 - IdentityModel
+
+## Links
+
+https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders
