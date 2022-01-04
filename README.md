@@ -84,7 +84,7 @@ Where `<PATH>` is the path to the folder containing .template.config.
 ## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
-- IdentityModel
+- IdentityModel.AspNetCore
 
 ## Links
 
