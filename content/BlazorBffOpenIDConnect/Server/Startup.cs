@@ -56,8 +56,8 @@ namespace Blazor.BFF.OpenIDConnect.Server
                // options.ClaimActions.MapUniqueJsonKey("preferred_username", "preferred_username");
            });
 
-           services.AddControllersWithViews(options =>
-                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()));
+            services.AddControllersWithViews(options =>
+                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()));
 
             services.AddRazorPages().AddMvcOptions(options =>
             {
