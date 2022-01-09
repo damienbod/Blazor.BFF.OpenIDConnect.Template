@@ -2,9 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
-**2022-01-04** 1.0.2
+**2022-01-04** 1.0.3
 - small fixes
 - nuget packages update
+- docs in app settings
 
 **2022-01-04** 1.0.1
 - small fixes

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Blazor.BFF.OpenIDConnect.Template</id>
-		<version>1.0.2</version>
+		<version>1.0.3</version>
 		<title>Blazor.BFF.OpenIDConnect.Template</title>
 		<license type="file">LICENSE</license>
 		<description>Blazor BFF template for WASM ASP.NET Core hosted</description>
