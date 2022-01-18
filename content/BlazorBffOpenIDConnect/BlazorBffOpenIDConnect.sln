@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.BFF.OpenIDConnect.Shared", "Shared\Blazor.BFF.OpenIDConnect.Shared.csproj", "{CFDA20EC-841D-4A9C-A95C-2C674DA96F23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBffOpenIDConnect.Shared", "Shared\BlazorBffOpenIDConnect.Shared.csproj", "{CFDA20EC-841D-4A9C-A95C-2C674DA96F23}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.BFF.OpenIDConnect.Server", "Server\Blazor.BFF.OpenIDConnect.Server.csproj", "{74A2A84B-C3B8-499F-80ED-093854CABDEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBffOpenIDConnect.Server", "Server\BlazorBffOpenIDConnect.Server.csproj", "{74A2A84B-C3B8-499F-80ED-093854CABDEA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.BFF.OpenIDConnect.Client", "Client\Blazor.BFF.OpenIDConnect.Client.csproj", "{BD70F728-398A-4A88-A7C7-A3D9B78B5AE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBffOpenIDConnect.Client", "Client\BlazorBffOpenIDConnect.Client.csproj", "{BD70F728-398A-4A88-A7C7-A3D9B78B5AE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -20,5 +20,5 @@ jobs:
         include-prerelease: True
     - name: Restore dependencies
       run: dotnet restore ./content/BlazorBffOpenIDConnect/Server
-    - name: Build STS
-      run: dotnet build ./content/BlazorBffOpenIDConnect/Server/Blazor.BFF.OpenIDConnect.Server.csproj --no-restore
+    - name: Build Blazor template
+      run: dotnet build ./content/BlazorBffOpenIDConnect/Server/BlazorBffOpenIDConnect.Server.csproj --no-restore
