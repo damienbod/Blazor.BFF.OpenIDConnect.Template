@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
-namespace Blazor.BFF.OpenIDConnect.Server
+namespace BlazorBffOpenIDConnect.Server
 {
     public class Startup
     {

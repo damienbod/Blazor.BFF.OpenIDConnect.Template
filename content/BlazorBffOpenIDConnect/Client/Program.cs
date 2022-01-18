@@ -1,4 +1,4 @@
-﻿using Blazor.BFF.OpenIDConnect.Client.Services;
+﻿using BlazorBffOpenIDConnect.Client.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace Blazor.BFF.OpenIDConnect.Client
+namespace BlazorBffOpenIDConnect.Client
 {
     public class Program
     {

@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Shared\Blazor.BFF.OpenIDConnect.Shared.csproj" />
+    <ProjectReference Include="..\Shared\BlazorBffOpenIDConnect.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>

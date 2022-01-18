@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Blazor.BFF.OpenIDConnect.Shared.Authorization
+namespace BlazorBffOpenIDConnect.Shared.Authorization
 {
     public class UserInfo
     {
