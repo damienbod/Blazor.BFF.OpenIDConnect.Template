@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2022-01-21** 1.0.6
+- Remove unused LoginDisplay razor page
+
 **2022-01-18** 1.0.5
 - fix name project generation
 
