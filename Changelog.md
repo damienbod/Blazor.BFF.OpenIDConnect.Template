@@ -2,6 +2,11 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2022-01-23** 1.0.7
+- Remove PWA items, default template uses anti-forgery cookies and no PWA support
+  (Will consider supporting this later, requires switching to CORS preflight CSRF protection)
+- Using the AuthorizedHandler for protected requests
+
 **2022-01-21** 1.0.6
 - Remove unused LoginDisplay razor page
 
