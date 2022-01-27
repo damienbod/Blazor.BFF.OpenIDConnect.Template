@@ -1,67 +1,58 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using BlazorBffOpenIDConnect.Shared.Authorization;
+﻿using BlazorBffOpenIDConnect.Shared.Authorization;
 using IdentityModel;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
-namespace BlazorBffOpenIDConnect.Server.Controllers
+namespace BlazorBffOpenIDConnect.Server.Controllers;
+
+// orig src https://github.com/berhir/BlazorWebAssemblyCookieAuth
+[Route("api/[controller]")]
+[ApiController]
+public class UserController : ControllerBase
 {
-    // orig src https://github.com/berhir/BlazorWebAssemblyCookieAuth
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UserController : ControllerBase
+    [HttpGet]
+    [AllowAnonymous]
+    public IActionResult GetCurrentUser() 
+        => Ok(User.Identity.IsAuthenticated ? CreateUserInfo(User) : UserInfo.Anonymous);
+
+    private UserInfo CreateUserInfo(ClaimsPrincipal claimsPrincipal)
     {
-        [HttpGet]
-        [AllowAnonymous]
-        public IActionResult GetCurrentUser()
+        if (!claimsPrincipal.Identity.IsAuthenticated)
         {
-            return Ok(User.Identity.IsAuthenticated ? CreateUserInfo(User) : UserInfo.Anonymous);
+            return UserInfo.Anonymous;
         }
 
-        private UserInfo CreateUserInfo(ClaimsPrincipal claimsPrincipal)
+        var userInfo = new UserInfo
         {
-            if (!claimsPrincipal.Identity.IsAuthenticated)
-            {
-                return UserInfo.Anonymous;
-            }
+            IsAuthenticated = true
+        };
 
-            var userInfo = new UserInfo
-            {
-                IsAuthenticated = true
-            };
-
-            if (claimsPrincipal.Identity is ClaimsIdentity claimsIdentity)
-            {
-                userInfo.NameClaimType = claimsIdentity.NameClaimType;
-                userInfo.RoleClaimType = claimsIdentity.RoleClaimType;
-            }
-            else
-            {
-                userInfo.NameClaimType = JwtClaimTypes.Name;
-                userInfo.RoleClaimType = JwtClaimTypes.Role;
-            }
-
-            if (claimsPrincipal.Claims.Any())
-            {
-                var claims = new List<ClaimValue>();
-                var nameClaims = claimsPrincipal.FindAll(userInfo.NameClaimType);
-                foreach (var claim in nameClaims)
-                {
-                    claims.Add(new ClaimValue(userInfo.NameClaimType, claim.Value));
-                }
-
-                // Uncomment this code if you want to send additional claims to the client.
-                //foreach (var claim in claimsPrincipal.Claims.Except(nameClaims))
-                //{
-                //    claims.Add(new ClaimValue(claim.Type, claim.Value));
-                //}
-
-                userInfo.Claims = claims;
-            }
-
-            return userInfo;
+        if (claimsPrincipal.Identity is ClaimsIdentity claimsIdentity)
+        {
+            userInfo.NameClaimType = claimsIdentity.NameClaimType;
+            userInfo.RoleClaimType = claimsIdentity.RoleClaimType;
         }
+        else
+        {
+            userInfo.NameClaimType = JwtClaimTypes.Name;
+            userInfo.RoleClaimType = JwtClaimTypes.Role;
+        }
+
+        if (claimsPrincipal.Claims.Any())
+        {
+            var claims = claimsPrincipal.FindAll(userInfo.NameClaimType)
+                                        .Select(u => new ClaimValue(userInfo.NameClaimType, u.Value))
+                                        .ToList();
+
+            // Uncomment this code if you want to send additional claims to the client.
+            //var allClaims = claimsPrincipal.Claims.Select(u => new ClaimValue(userInfo.NameClaimType, u.Value))
+            //                                      .ToList();
+            //claims.AddRange(allClaims.Except(allClaims));
+
+            userInfo.Claims = claims;
+        }
+
+        return userInfo;
     }
 }
