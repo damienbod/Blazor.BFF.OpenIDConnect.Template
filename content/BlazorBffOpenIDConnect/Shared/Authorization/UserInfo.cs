@@ -4,7 +4,7 @@ namespace BlazorBffOpenIDConnect.Shared.Authorization;
 
 public class UserInfo
 {
-    public static readonly UserInfo Anonymous = new UserInfo();
+    public static readonly UserInfo Anonymous = new();
 
     public bool IsAuthenticated { get; set; }
 
