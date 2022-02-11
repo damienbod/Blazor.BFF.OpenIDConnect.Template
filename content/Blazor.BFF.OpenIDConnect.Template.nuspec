@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Blazor.BFF.OpenIDConnect.Template</id>
-		<version>1.0.7</version>
+		<version>1.0.8</version>
 		<title>Blazor.BFF.OpenIDConnect.Template</title>
 		<license type="file">LICENSE</license>
 		<description>Blazor BFF template for WASM ASP.NET Core hosted</description>
@@ -15,7 +15,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<copyright>2022 damienbod</copyright>
 		<summary>This template provides a simple Blazor template with BFF server authentication WASM hosted</summary>
-		<releaseNotes>Remove PWA items, default template uses anti-forgery cookies and no PWA support, Using the AuthorizedHandler for protected requests</releaseNotes>
+		<releaseNotes>Update namespaces, update nuget packages</releaseNotes>
 		<repository type="git" url="https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template" />
 		<packageTypes>
 			<packageType name="Template" />
