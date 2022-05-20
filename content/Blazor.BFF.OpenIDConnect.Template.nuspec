@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Blazor.BFF.OpenIDConnect.Template</id>
-		<version>1.1.0</version>
+		<version>1.2.0</version>
 		<title>Blazor.BFF.OpenIDConnect.Template</title>
 		<license type="file">LICENSE</license>
-		<description>Blazor BFF template for WASM ASP.NET Core hosted</description>
+		<description>Blazor backend for frontend (BFF) template for WASM ASP.NET Core hosted</description>
 			<projectUrl>https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template</projectUrl>
 		<authors>damienbod</authors>
 		<owners>damienbod</owners>
@@ -15,7 +15,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<copyright>2022 damienbod</copyright>
 		<summary>This template provides a simple Blazor template with BFF server authentication WASM hosted</summary>
-		<releaseNotes>Updated nuget packages, using nullable</releaseNotes>
+		<releaseNotes>Updated nuget packages, improved endpoints</releaseNotes>
 		<repository type="git" url="https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template" />
 		<packageTypes>
 			<packageType name="Template" />

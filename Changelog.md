@@ -2,6 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2022-05-20** 1.2.0
+- Updated nuget packages
+- Improved endpoints
+
 **2022-03-20** 1.1.0
 - Updated nuget packages
 - Using nullable
