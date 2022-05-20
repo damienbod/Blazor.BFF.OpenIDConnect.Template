@@ -2,6 +2,18 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2022-05-20** 1.2.0
+- Updated nuget packages
+- Improved endpoints
+
+**2022-03-20** 1.1.0
+- Updated nuget packages
+- Using nullable
+
+**2022-02-11** 1.0.8
+- Update namespaces
+- Update nuget packages
+
 **2022-01-23** 1.0.7
 - Remove PWA items, default template uses anti-forgery cookies and no PWA support
   (Will consider supporting this later, requires switching to CORS preflight CSRF protection)

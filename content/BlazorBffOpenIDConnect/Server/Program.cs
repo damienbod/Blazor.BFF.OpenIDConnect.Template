@@ -1,4 +1,5 @@
 ﻿using BlazorBffOpenIDConnect.Server;
+
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Mvc;
@@ -23,8 +24,6 @@ services.AddAntiforgery(options =>
 services.AddHttpClient();
 services.AddOptions();
 
-var openIDConnectSettings = configuration.GetSection("OpenIDConnectSettings");
-
 services.AddAuthentication(options =>
 {
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
@@ -33,15 +32,16 @@ services.AddAuthentication(options =>
 .AddCookie()
 .AddOpenIdConnect(options =>
 {
-   options.SignInScheme = "Cookies";
-   options.Authority = openIDConnectSettings["Authority"];
-   options.ClientId = openIDConnectSettings["ClientId"];
-   options.ClientSecret = openIDConnectSettings["ClientSecret"];
-   options.RequireHttpsMetadata = true;
-   options.ResponseType = OpenIdConnectResponseType.Code;
-   options.Scope.Add("profile");
-   options.SaveTokens = true;
-   options.GetClaimsFromUserInfoEndpoint = true;
+    configuration.GetSection("OpenIDConnectSettings").Bind(options);
+    options.Authority = configuration["OpenIDConnectSettings:Authority"];
+    options.ClientId = configuration["OpenIDConnectSettings:ClientId"];
+    options.ClientSecret = configuration["OpenIDConnectSettings:ClientSecret"];
+
+    options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.ResponseType = OpenIdConnectResponseType.Code;
+
+    options.SaveTokens = true;
+    options.GetClaimsFromUserInfoEndpoint = true;
 });
 
 services.AddControllersWithViews(options =>

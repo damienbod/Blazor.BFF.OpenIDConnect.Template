@@ -1,7 +1,8 @@
 ﻿using BlazorBffOpenIDConnect.Shared.Authorization;
-using IdentityModel;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+
 using System.Security.Claims;
 
 namespace BlazorBffOpenIDConnect.Server.Controllers;
@@ -13,12 +14,11 @@ public class UserController : ControllerBase
 {
     [HttpGet]
     [AllowAnonymous]
-    public IActionResult GetCurrentUser() 
-        => Ok(User.Identity.IsAuthenticated ? CreateUserInfo(User) : UserInfo.Anonymous);
+    public IActionResult GetCurrentUser() => Ok(CreateUserInfo(User));
 
     private UserInfo CreateUserInfo(ClaimsPrincipal claimsPrincipal)
     {
-        if (!claimsPrincipal.Identity.IsAuthenticated)
+        if (!claimsPrincipal?.Identity?.IsAuthenticated ?? true)
         {
             return UserInfo.Anonymous;
         }
@@ -28,18 +28,18 @@ public class UserController : ControllerBase
             IsAuthenticated = true
         };
 
-        if (claimsPrincipal.Identity is ClaimsIdentity claimsIdentity)
+        if (claimsPrincipal?.Identity is ClaimsIdentity claimsIdentity)
         {
             userInfo.NameClaimType = claimsIdentity.NameClaimType;
             userInfo.RoleClaimType = claimsIdentity.RoleClaimType;
         }
         else
         {
-            userInfo.NameClaimType = JwtClaimTypes.Name;
-            userInfo.RoleClaimType = JwtClaimTypes.Role;
+            userInfo.NameClaimType = ClaimTypes.Name;
+            userInfo.RoleClaimType = ClaimTypes.Role;
         }
 
-        if (claimsPrincipal.Claims.Any())
+        if (claimsPrincipal?.Claims?.Any() ?? false)
         {
             var claims = claimsPrincipal.FindAll(userInfo.NameClaimType)
                                         .Select(u => new ClaimValue(userInfo.NameClaimType, u.Value))
@@ -48,7 +48,7 @@ public class UserController : ControllerBase
             // Uncomment this code if you want to send additional claims to the client.
             //var allClaims = claimsPrincipal.Claims.Select(u => new ClaimValue(userInfo.NameClaimType, u.Value))
             //                                      .ToList();
-            //claims.AddRange(allClaims.Except(allClaims));
+            //claims.AddRange(allclaims).Distinct();
 
             userInfo.Claims = claims;
         }
