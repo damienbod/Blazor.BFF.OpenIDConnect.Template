@@ -1,4 +1,5 @@
 ﻿using BlazorBffOpenIDConnect.Server;
+using BlazorBffOpenIDConnect.Server.Services;
 
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -79,11 +80,15 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseNoUnauthorizedRedirect("/api");
+
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapControllers();
+app.MapNotFound("/api/{**segment}");
 app.MapFallbackToPage("/_Host");
 
 app.Run();
