@@ -90,7 +90,7 @@ public class Startup
 
         app.UseRouting();
 
-		app.UseNoUnauthorizedRedirect("/api");
+        app.UseNoUnauthorizedRedirect("/api");
 
         app.UseAuthentication();
         app.UseAuthorization();
