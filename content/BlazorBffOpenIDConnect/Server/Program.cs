@@ -8,7 +8,10 @@ using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.ConfigureWebHostDefaults(webBuilder => webBuilder.ConfigureKestrel(options => options.AddServerHeader = false));
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.AddServerHeader = false;
+});
 
 var services = builder.Services;
 var configuration = builder.Configuration;
