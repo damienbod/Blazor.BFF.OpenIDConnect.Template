@@ -2,6 +2,13 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2022-05-21** 1.2.1
+- use of expression bodies
+- use new top-level statements and remove
+- enable ImplicitUsings
+- add IAntiforgeryHttpClientFactory/AntiforgeryHttpClientFactory
+- Replace of IdentityModel with System.Security.Claims and remove IdentityModel nuget package
+
 **2022-05-20** 1.2.0
 - Updated nuget packages
 - Improved endpoints
