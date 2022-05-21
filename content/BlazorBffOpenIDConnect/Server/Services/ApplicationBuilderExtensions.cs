@@ -1,5 +1,3 @@
-using System.Linq;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Net.Http.Headers;
 
 namespace BlazorBffOpenIDConnect.Server.Services;

@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-
-namespace BlazorBffOpenIDConnect.Server;
+﻿namespace BlazorBffOpenIDConnect.Server;
 
 public static class SecurityHeadersDefinitions
 {
