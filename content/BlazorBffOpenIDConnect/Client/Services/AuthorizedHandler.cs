@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace BlazorBffOpenIDConnect.Client.Services;
+﻿namespace BlazorBffOpenIDConnect.Client.Services;
 
 // orig src https://github.com/berhir/BlazorWebAssemblyCookieAuth
 public class AuthorizedHandler : DelegatingHandler

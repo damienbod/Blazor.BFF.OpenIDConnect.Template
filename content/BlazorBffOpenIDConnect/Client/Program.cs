@@ -1,35 +1,28 @@
-﻿using BlazorBffOpenIDConnect.Client;
-using BlazorBffOpenIDConnect.Client.Services;
+﻿var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection.Extensions;
+var services = builder.Services;
 
-using System.Net.Http.Headers;
-
-
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-builder.Services.AddOptions();
-builder.Services.AddAuthorizationCore();
-builder.Services.TryAddSingleton<AuthenticationStateProvider, HostAuthenticationStateProvider>();
-builder.Services.TryAddSingleton(sp => (HostAuthenticationStateProvider)sp.GetRequiredService<AuthenticationStateProvider>());
-builder.Services.AddTransient<AuthorizedHandler>();
+services.AddOptions();
+services.AddAuthorizationCore();
+services.TryAddSingleton<AuthenticationStateProvider, HostAuthenticationStateProvider>();
+services.TryAddSingleton(sp => (HostAuthenticationStateProvider)sp.GetRequiredService<AuthenticationStateProvider>());
+services.AddTransient<AuthorizedHandler>();
 
 builder.RootComponents.Add<App>("#app");
 
-builder.Services.AddHttpClient("default", client =>
+services.AddHttpClient("default", client =>
 {
     client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 });
 
-builder.Services.AddHttpClient("authorizedClient", client =>
+services.AddHttpClient(AuthDefaults.AuthorizedClientName, client =>
 {
     client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 }).AddHttpMessageHandler<AuthorizedHandler>();
 
-builder.Services.AddTransient(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("default"));
-builder.Services.AddTransient<IAntiforgeryHttpClientFactory, AntiforgeryHttpClientFactory>();
+services.AddTransient(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("default"));
+services.AddTransient<IAntiforgeryHttpClientFactory, AntiforgeryHttpClientFactory>();
 
 await builder.Build().RunAsync();

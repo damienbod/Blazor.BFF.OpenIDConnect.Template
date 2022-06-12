@@ -1,6 +1,4 @@
-﻿using Microsoft.JSInterop;
-
-namespace BlazorBffOpenIDConnect.Client.Services;
+﻿namespace BlazorBffOpenIDConnect.Client.Services;
 
 public class AntiforgeryHttpClientFactory : IAntiforgeryHttpClientFactory
 {
@@ -13,12 +11,12 @@ public class AntiforgeryHttpClientFactory : IAntiforgeryHttpClientFactory
         _jSRuntime = jSRuntime;
     }
 
-    public async Task<HttpClient> CreateClientAsync(string clientName = "authorizedClient")
+    public async Task<HttpClient> CreateClientAsync(string clientName = AuthDefaults.AuthorizedClientName)
     {
         var token = await _jSRuntime.InvokeAsync<string>("getAntiForgeryToken");
 
         var client = _httpClientFactory.CreateClient(clientName);
-        client.DefaultRequestHeaders.Add("X-XSRF-TOKEN", token);
+        client.DefaultRequestHeaders.Add(AntiforgeryDefaults.HeaderName, token);
 
         return client;
     }

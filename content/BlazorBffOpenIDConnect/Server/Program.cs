@@ -1,17 +1,4 @@
-﻿using BlazorBffOpenIDConnect.Server;
-using BlazorBffOpenIDConnect.Server.Services;
-
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.OpenIdConnect;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Protocols.OpenIdConnect;
-
-var builder = WebApplication.CreateBuilder(args);
-
-builder.WebHost.ConfigureKestrel(serverOptions =>
-{
-    serverOptions.AddServerHeader = false;
-});
+﻿var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 var configuration = builder.Configuration;
@@ -19,8 +6,8 @@ var env = builder.Environment;
 
 services.AddAntiforgery(options =>
 {
-    options.HeaderName = "X-XSRF-TOKEN";
-    options.Cookie.Name = "__Host-X-XSRF-TOKEN";
+    options.HeaderName = AntiforgeryDefaults.HeaderName;
+    options.Cookie.Name = AntiforgeryDefaults.CookieName;
     options.Cookie.SameSite = SameSiteMode.Strict;
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
 });
@@ -37,9 +24,6 @@ services.AddAuthentication(options =>
 .AddOpenIdConnect(options =>
 {
     configuration.GetSection("OpenIDConnectSettings").Bind(options);
-    options.Authority = configuration["OpenIDConnectSettings:Authority"];
-    options.ClientId = configuration["OpenIDConnectSettings:ClientId"];
-    options.ClientSecret = configuration["OpenIDConnectSettings:ClientSecret"];
 
     options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.ResponseType = OpenIdConnectResponseType.Code;
@@ -59,8 +43,8 @@ services.AddRazorPages().AddMvcOptions(options =>
     //options.Filters.Add(new AuthorizeFilter(policy));
 });
 
-builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
+services.AddControllersWithViews();
+services.AddRazorPages();
 
 var app = builder.Build();
 
