@@ -43,9 +43,6 @@ services.AddRazorPages().AddMvcOptions(options =>
     //options.Filters.Add(new AuthorizeFilter(policy));
 });
 
-services.AddControllersWithViews();
-services.AddRazorPages();
-
 var app = builder.Build();
 
 if (env.IsDevelopment())
