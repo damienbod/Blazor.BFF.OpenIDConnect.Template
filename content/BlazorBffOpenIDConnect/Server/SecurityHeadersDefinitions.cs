@@ -54,7 +54,7 @@ public static class SecurityHeadersDefinitions
         if (!isDev)
         {
             // maxage = one year in seconds
-            policy.AddStrictTransportSecurityMaxAgeIncludeSubDomains(maxAgeInSeconds: 60 * 60 * 24 * 365);
+            policy.AddStrictTransportSecurityMaxAgeIncludeSubDomains();
         }
 
         return policy;

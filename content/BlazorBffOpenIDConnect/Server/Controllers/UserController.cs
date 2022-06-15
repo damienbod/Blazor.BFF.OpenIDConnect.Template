@@ -1,9 +1,4 @@
-﻿using BlazorBffOpenIDConnect.Shared.Authorization;
-
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-using System.Security.Claims;
+﻿using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
 namespace BlazorBffOpenIDConnect.Server.Controllers;
 

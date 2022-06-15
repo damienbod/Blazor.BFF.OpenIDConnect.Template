@@ -2,5 +2,5 @@
 
 public interface IAntiforgeryHttpClientFactory
 {
-    Task<HttpClient> CreateClientAsync(string clientName = "authorizedClient");
+    Task<HttpClient> CreateClientAsync(string clientName = AuthDefaults.AuthorizedClientName);
 }
