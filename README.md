@@ -69,7 +69,7 @@ nuget pack content/Blazor.BFF.OpenIDConnect.Template.nuspec
 Locally built nupkg:
 
 ```
-dotnet new -i Blazor.BFF.OpenIDConnect.Template.1.2.1.nupkg
+dotnet new -i Blazor.BFF.OpenIDConnect.Template.1.2.2.nupkg
 ```
 
 Local folder:

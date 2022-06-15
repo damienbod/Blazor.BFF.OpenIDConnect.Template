@@ -2,6 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2022-06-15** 1.2.2
+- global usings
+- remove duplicate services
+
 **2022-05-21** 1.2.1
 - use of expression bodies
 - use new top-level statements and remove

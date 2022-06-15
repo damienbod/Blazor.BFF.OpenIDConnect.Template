@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
 	<metadata>
 		<id>Blazor.BFF.OpenIDConnect.Template</id>
-		<version>1.2.1</version>
+		<version>1.2.2</version>
 		<title>Blazor.BFF.OpenIDConnect.Template</title>
 		<license type="file">LICENSE</license>
 		<description>Blazor backend for frontend (BFF) template for WASM ASP.NET Core hosted</description>
@@ -15,7 +15,8 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<copyright>2022 damienbod</copyright>
 		<summary>This template provides a simple Blazor template with BFF server authentication WASM hosted</summary>
-		<releaseNotes>use of expression bodies, use new top-level statements and remove, enable ImplicitUsings, add IAntiforgeryHttpClientFactory/AntiforgeryHttpClientFactory, Replace of IdentityModel with System.Security.Claims and remove IdentityModel nuget package</releaseNotes>
+		<releaseNotes>global usings, remove duplicate services
+</releaseNotes>
 		<repository type="git" url="https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template" />
 		<packageTypes>
 			<packageType name="Template" />
