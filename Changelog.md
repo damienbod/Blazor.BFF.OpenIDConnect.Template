@@ -2,9 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
-**2022-06-15** 1.2.3
+**2022-07-09** 1.2.3
 - Improve user controller comments
 - Updated packages
+- Remove duplicate services
 
 **2022-06-15** 1.2.2
 - global usings
