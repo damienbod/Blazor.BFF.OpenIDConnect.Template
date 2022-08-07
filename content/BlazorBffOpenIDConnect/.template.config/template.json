@@ -4,13 +4,17 @@
         "AspNetCore",
         "WASM",
         "OpenIDConnect",
-		"OAuth2"
+		"OAuth2",
+		"Web",
+		"Cloud",
+		"Console"
     ],
     "name": "ASP.NET Core Blazor BFF hosted WASM OpenID Connect",
     "identity": "Blazor.BFF.OpenIDConnect.Template",
     "shortName": "blazorbffoidc",
     "tags": {
-        "language": "C#"
+        "language": "C#",
+		"type":"project"
     },
     "sourceName": "BlazorBffOpenIDConnect",
     "preferNameDirectory": "true"
