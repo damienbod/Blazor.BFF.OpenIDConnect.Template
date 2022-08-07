@@ -18,7 +18,7 @@
 		"type":"solution"
     },
     "sourceName": "BlazorBffOpenIDConnect",
-    "preferNameDirectory": "true"
+    "preferNameDirectory": "true",
 	"symbols": {
 		"HttpsPort": {
 		  "type": "parameter",
