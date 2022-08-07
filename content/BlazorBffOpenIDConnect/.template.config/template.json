@@ -14,7 +14,7 @@
     "shortName": "blazorbffoidc",
     "tags": {
         "language": "C#",
-		"type":"project"
+		"type":"solution"
     },
     "sourceName": "BlazorBffOpenIDConnect",
     "preferNameDirectory": "true"
