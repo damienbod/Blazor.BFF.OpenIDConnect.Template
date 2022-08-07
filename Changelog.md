@@ -2,7 +2,7 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
-**2022-08-07** 1.2.4
+**2022-08-07** 1.2.5
 - Improve template
 - Updated packages
 
