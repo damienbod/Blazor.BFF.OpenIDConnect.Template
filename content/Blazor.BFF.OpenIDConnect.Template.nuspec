@@ -9,7 +9,8 @@
 			<projectUrl>https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template</projectUrl>
 		<authors>damienbod</authors>
 		<owners>damienbod</owners>
-		<iconUrl>http://www.gravatar.com/avatar/61d005637f57b5c3da8ba662cf04a9d6.png</iconUrl>
+		<icon>./BlazorBffOpenIDConnect/.template.config/icon.png</icon>
+		<iconUrl>https://www.gravatar.com/avatar/61d005637f57b5c3da8ba662cf04a9d6.png</iconUrl>
 		<language>en-US</language>
 		<tags>Blazor BFF WASM ASP.NET Core</tags>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
