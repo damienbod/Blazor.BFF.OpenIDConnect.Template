@@ -4,11 +4,12 @@
         "AspNetCore",
         "WASM",
         "OpenIDConnect",
-	"OAuth2",
-	"Web",
-	"Cloud",
-	"Console",
-	"Solution"
+		"OAuth2",
+		"Web",
+		"Cloud",
+		"Console",
+		"Solution",
+		"Blazor"
     ],
     "name": "ASP.NET Core Blazor BFF hosted WASM OpenID Connect",
     "identity": "Blazor.BFF.OpenIDConnect.Template",
@@ -25,27 +26,45 @@
 		"BD70F728-398A-4A88-A7C7-A3D9B78B5AE6"
     ],
     "symbols": {
+		"HttpPort": {
+		  "type": "parameter",
+		  "datatype": "integer",
+		  "description": "Port number to use for the HTTP endpoint in launchSettings.json."
+		},
+		"HttpPortGenerated": {
+		  "type": "generated",
+		  "generator": "port"
+		},
+		"HttpPortReplacer": {
+		  "type": "generated",
+		  "generator": "coalesce",
+		  "parameters": {
+			"sourceVariableName": "HttpPort",
+			"fallbackVariableName": "HttpPortGenerated"
+		  },
+		  "replaces": "44348"
+		},
 		"HttpsPort": {
-			"type": "parameter",
-			"datatype": "integer",
-			"description": "Port number to use for the HTTPS endpoint in launchSettings.json."
+		  "type": "parameter",
+		  "datatype": "integer",
+		  "description": "Port number to use for the HTTPS endpoint in launchSettings.json."
 		},
 		"HttpsPortGenerated": {
-			"type": "generated",
-			"generator": "port",
-			"parameters": {
+		  "type": "generated",
+		  "generator": "port",
+		  "parameters": {
 			"low": 44300,
 			"high": 44399
-			}
+		  }
 		},
 		"HttpsPortReplacer": {
-			"type": "generated",
-			"generator": "coalesce",
-			"parameters": {
+		  "type": "generated",
+		  "generator": "coalesce",
+		  "parameters": {
 			"sourceVariableName": "HttpsPort",
 			"fallbackVariableName": "HttpsPortGenerated"
-			},
-			"replaces": "44348"
+		  },
+		  "replaces": "44348"
 		}
     }
 }
