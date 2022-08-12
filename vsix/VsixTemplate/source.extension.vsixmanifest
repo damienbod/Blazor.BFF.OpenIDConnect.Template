@@ -13,7 +13,7 @@
 		<Tags>oauth2 dotnet wasm aspnet-core openidconnect oidc bff blazor</Tags>
 	</Metadata>
 	<Installation>
-		<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
+		<InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[16.0, 18.0)"/>
 	</Installation>
 	<Dependencies>
 		<Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
