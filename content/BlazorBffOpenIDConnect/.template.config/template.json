@@ -24,5 +24,24 @@
 		"CFDA20EC-841D-4A9C-A95C-2C674DA96F23",
 		"74A2A84B-C3B8-499F-80ED-093854CABDEA",
 		"BD70F728-398A-4A88-A7C7-A3D9B78B5AE6"
-    ]
+    ],
+	"symbols": {
+		"HttpsPortGenerated": {
+		  "type": "generated",
+		  "generator": "port",
+		  "parameters": {
+			"low": 44300,
+			"high": 44399
+		  }
+		},
+		"HttpsPortReplacer": {
+		  "type": "generated",
+		  "generator": "coalesce",
+		  "parameters": {
+			"sourceVariableName": "HttpsPort",
+			"fallbackVariableName": "HttpsPortGenerated"
+		  },
+		  "replaces": "44348"
+		}
+   }
 }
