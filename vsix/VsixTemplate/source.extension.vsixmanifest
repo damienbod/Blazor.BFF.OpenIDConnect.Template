@@ -14,6 +14,8 @@
 	</Metadata>
 	<Installation>
 		<InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[16.0, 18.0)"/>
+		<InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Community"/>
+		<InstallationTarget Version="[16.0,18.0)" Id="Microsoft.VisualStudio.Pro"/>
 	</Installation>
 	<Dependencies>
 		<Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
