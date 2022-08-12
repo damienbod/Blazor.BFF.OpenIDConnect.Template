@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31110.264
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VsixTemplate", "VsixTemplate\VsixTemplate.csproj", "{F0581184-E4CA-495D-AAC6-76F08CF3D0C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vsix.Blazor.BFF.OpenIDConnect.Template", "VsixTemplate\Vsix.Blazor.BFF.OpenIDConnect.Template.csproj", "{F0581184-E4CA-495D-AAC6-76F08CF3D0C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Id="VsixTemplate.f88fc209-4821-4bd9-b5a8-2383e83e2825" Version="1.0" Language="en-US" Publisher="Sayed Ibrahim Hashimi" />
-    <DisplayName>Blazor.BFF.OpenIDConnect.Template</DisplayName>
-    <Description>This template can be used to create a Blazor WASM application hosted in an ASP.NET Core Web app using OpenID Connect to authenticate using the BFF security architecture. (server authentication) This removes the tokens from the browser and uses cookies with each HTTP request, response. The template also adds the required security headers as best it can for a Blazor application.</Description>
-  </Metadata>
-  <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
-  </Installation>
-  <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
-  </Dependencies>
-  <Prerequisites>
-    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
-  </Prerequisites>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Templates.pkgdef" /> 
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-  </Assets>
+	<Metadata>
+		<Identity Id="Vsix.Blazor.BFF.OpenIDConnect.Template.f88fc209-4821-4bd9-b5a8-2383e83e2825" Version="1.2.5" Language="en-US" Publisher="damienbod" />
+		<DisplayName>Blazor.BFF.OpenIDConnect.Template</DisplayName>
+		<Description xml:space="preserve">This template can be used to create a Blazor WASM application hosted in an ASP.NET Core Web app using OpenID Connect to authenticate using the BFF security architecture. (server authentication) This removes the tokens from the browser and uses cookies with each HTTP request, response. The template also adds the required security headers as best it can for a Blazor application.</Description>
+		<MoreInfo>https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template</MoreInfo>
+		<License>LICENSE.txt</License>
+		<GettingStartedGuide>getting-started.txt</GettingStartedGuide>
+		<ReleaseNotes>release-notes.txt</ReleaseNotes>
+		<Icon>icon.jpg</Icon>
+		<PreviewImage>icon.jpg</PreviewImage>
+		<Tags>oauth2 dotnet wasm aspnet-core openidconnect oidc bff blazor</Tags>
+	</Metadata>
+	<Installation>
+		<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
+	</Installation>
+	<Dependencies>
+		<Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+	</Dependencies>
+	<Prerequisites>
+		<Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
+	</Prerequisites>
+	<Assets>
+		<Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Templates.pkgdef" />
+		<Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+	</Assets>
 </PackageManifest>

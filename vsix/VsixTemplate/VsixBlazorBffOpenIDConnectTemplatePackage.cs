@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Task = System.Threading.Tasks.Task;
 
-namespace VsixTemplate {
+namespace Blazor.BFF.OpenIDConnect.Template {
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
     /// </summary>
@@ -23,10 +23,10 @@ namespace VsixTemplate {
     /// </para>
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
-    [Guid(VsixTemplatePackage.PackageGuidString)]
-    public sealed class VsixTemplatePackage : AsyncPackage {
+    [Guid(VsixBlazorBffOpenIDConnectTemplatePackage.PackageGuidString)]
+    public sealed class VsixBlazorBffOpenIDConnectTemplatePackage : AsyncPackage {
         /// <summary>
-        /// VsixTemplatePackage GUID string.
+        /// VsixBlazorBffOpenIDConnectTemplatePackage GUID string.
         /// </summary>
         public const string PackageGuidString = "11d93f85-5b62-4e80-88ca-23e14f0d0712";
 
