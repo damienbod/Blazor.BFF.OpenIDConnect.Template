@@ -30,7 +30,8 @@
 		  "type": "parameter",
 		  "datatype": "integer",
 		  "description": "Port number to use for the HTTPS endpoint in launchSettings.json.",
-		  "defaultValue": "44347"
+		  "defaultValue": "44347",
+		  "isRequired": true
 		},
 		"HttpsPortGenerated": {
 		  "type": "generated",
