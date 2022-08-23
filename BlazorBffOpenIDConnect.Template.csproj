@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageType>Template</PackageType>
+        <PackageId>Blazor.BFF.OpenIDConnect.Template</PackageId>
+        <Title>ASP.NET Core Blazor BFF hosted WASM OpenID Connect</Title>
+        <Authors>damienbod</Authors>
+        <Description>This template provides a simple Blazor template with BFF server authentication WASM hosted.</Description>
+        <PackageTags>dotnet-new;templates;Blazor;BFF;WASM;ASP.NET Core;AspNetCore;OpenIDConnect;OAuth2</PackageTags>
+        <TargetFramework>net6.0</TargetFramework>
+
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="BlazorBffOpenIDConnect\**\*" Exclude="**\bin\**;**\obj\**;**\.vs\**;" />
+        <Compile Remove="**\**" />
+        
+        <EmbeddedResource Remove="**\bin\**" />
+        <None Remove="**\bin\**" />
+
+        <EmbeddedResource Remove="**\obj\**" />
+        <None Remove="**\obj\**" />
+    </ItemGroup>
+
+</Project>
