@@ -5,7 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+  
 jobs:
   build:
 
@@ -18,7 +18,5 @@ jobs:
       with:
         dotnet-version: '6.0'
         include-prerelease: True
-    - name: Restore dependencies
-      run: dotnet restore ./BlazorBffOpenIDConnect/Server
     - name: Build Blazor template
-      run: dotnet build ./BlazorBffOpenIDConnect/Server/BlazorBffOpenIDConnect.Server.csproj --no-restore
+      run: dotnet build ./BlazorBffOpenIdConnect/
