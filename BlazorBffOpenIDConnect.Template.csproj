@@ -14,6 +14,13 @@
         <ContentTargetFolders>content</ContentTargetFolders>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <NoDefaultExcludes>true</NoDefaultExcludes>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageProjectUrl>https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template</PackageProjectUrl>
+        <Copyright>2022 damienbod</Copyright>
+        <PackageReadmeFile>README-NUGET.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template</RepositoryUrl>
+        <PackageReleaseNotes>new template, update packages</PackageReleaseNotes>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,6 +32,24 @@
 
         <EmbeddedResource Remove="**\obj\**" />
         <None Remove="**\obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="BlazorBffOpenIdConnect\.template.config\icon.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="LICENSE">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Update="README-NUGET.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

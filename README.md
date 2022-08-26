@@ -61,7 +61,7 @@ dotnet new -u Blazor.BFF.OpenIDConnect.Template
 https://docs.microsoft.com/en-us/dotnet/core/tutorials/create-custom-template
 
 ```
-nuget pack content/Blazor.BFF.OpenIDConnect.Template.nuspec
+dotnet pack -o ./publish -c Release -p:PackageVersion=1.2.7 --no-build
 ```
 
 ### install developement
@@ -69,7 +69,7 @@ nuget pack content/Blazor.BFF.OpenIDConnect.Template.nuspec
 Locally built nupkg:
 
 ```
-dotnet new -i Blazor.BFF.OpenIDConnect.Template.1.2.6.nupkg
+dotnet new -i Blazor.BFF.OpenIDConnect.Template.1.2.7.nupkg
 ```
 
 Local folder:
