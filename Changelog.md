@@ -4,7 +4,7 @@
 
 **2022-08-26** 1.2.7
 - Http port generator param added
-- Updated packages
+- new template creation
 
 **2022-08-12** 1.2.6
 - Http port generator added
