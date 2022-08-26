@@ -22,7 +22,7 @@ dotnet new -i Blazor.BFF.OpenIDConnect.Template
 ### run
 
 ```
-dotnet new blazorbffoidc -n YourCompany.Bff
+dotnet new blazorbffoidc -n YourCompany.Bff --HttpsPortCustom 44348
 ```
 
 Use the `-n` or `--name` parameter to change the name of the output created. This string is also used to substitute the namespace name in the .cs file for the project.
