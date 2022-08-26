@@ -9,7 +9,7 @@
         <PackageTags>dotnet-new;templates;Blazor;BFF;WASM;ASP.NET Core;AspNetCore;OpenIDConnect;OAuth2</PackageTags>
         <TargetFramework>net6.0</TargetFramework>
 
-		<summary>This template provides a simple Blazor template with BFF server authentication WASM hosted</summary>
+		<Summary>This template provides a simple Blazor template with BFF server authentication WASM hosted</Summary>
 		
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
