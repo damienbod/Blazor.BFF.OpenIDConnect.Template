@@ -20,6 +20,7 @@
         <PackageReadmeFile>README-NUGET.md</PackageReadmeFile>
         <RepositoryUrl>https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template</RepositoryUrl>
         <PackageReleaseNotes>new template, update packages</PackageReleaseNotes>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -41,6 +42,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Update="LICENSE">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
       <None Update="README-NUGET.md">
         <Pack>True</Pack>
         <PackagePath>\</PackagePath>

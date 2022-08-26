@@ -69,7 +69,7 @@ dotnet pack -o ./publish -c Release -p:PackageVersion=1.2.7 --no-build
 Locally built nupkg:
 
 ```
-dotnet new -i Blazor.BFF.OpenIDConnect.Template.1.2.6.nupkg
+dotnet new -i Blazor.BFF.OpenIDConnect.Template.1.2.7.nupkg
 ```
 
 Local folder:
