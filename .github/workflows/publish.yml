@@ -35,7 +35,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./publish/*
           release_name: Release ${{ steps.version.outputs.VERSION }}
-          # tag: ${{ steps.version.outputs.VERSION }}
+          tag: Release_${{ steps.version.outputs.VERSION }}
           file_glob: true
           overwrite: true
 
