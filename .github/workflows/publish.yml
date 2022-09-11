@@ -1,0 +1,42 @@
+name: publish
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.*
+        include-prerelease: True
+
+    - name: Build Blazor template
+      run: dotnet build ./BlazorBffOpenIdConnect/
+
+    - id: version
+      name: Get release version
+      run: |
+        value=`cat ReleaseVersion`
+        echo ::set-output name=VERSION::$value
+
+    - name: Pack
+      run: dotnet pack -o ./publish -p:PackageVersion=${{ steps.version.outputs.VERSION }}
+
+    - name: Upload nupkg to github releases
+      uses: svenstaro/upload-release-action@v2
+      with:
+          body: "" # TODO:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./publish/*
+          release_name: Release ${{ steps.version.outputs.VERSION }}
+          # tag: ${{ steps.version.outputs.VERSION }}
+          file_glob: true
+          overwrite: true
+
+    # Add nuget publish step

@@ -8,9 +8,7 @@
         <Description>This template provides a simple Blazor template with BFF server authentication WASM hosted.</Description>
         <PackageTags>dotnet-new;templates;Blazor;BFF;WASM;ASP.NET Core;AspNetCore;OpenIDConnect;OAuth2</PackageTags>
         <TargetFramework>net6.0</TargetFramework>
-
 		<Summary>This template provides a simple Blazor template with BFF server authentication WASM hosted</Summary>
-		
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
@@ -29,29 +27,18 @@
         <Content Include="BlazorBffOpenIDConnect\**\*" Exclude="**\bin\**;**\obj\**;**\.vs\**;" />
         <Compile Remove="**\**" />
         
-        <EmbeddedResource Remove="**\bin\**" />
-        <None Remove="**\bin\**" />
+        <EmbeddedResource Remove="**\bin\**;**\obj\**" />
+        <None Remove="**\bin\**; **\obj\**" />
 
-        <EmbeddedResource Remove="**\obj\**" />
-        <None Remove="**\obj\**" />
-    </ItemGroup>
+        <None Update="LICENSE;README-NUGET.md" >
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 
-    <ItemGroup>
-      <None Include="BlazorBffOpenIdConnect\.template.config\icon.png">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Update="LICENSE">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
-      <None Update="README-NUGET.md">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
+        <None Include="BlazorBffOpenIdConnect\.template.config\icon.png" >
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
     </ItemGroup>
 
 </Project>
