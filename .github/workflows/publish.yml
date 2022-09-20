@@ -5,7 +5,7 @@ on:
   
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -24,19 +24,22 @@ jobs:
       run: |
         value=`cat ReleaseVersion`
         echo ::set-output name=VERSION::$value
-
+      shell: bash
+        
     - name: Pack
       run: dotnet pack -o ./publish -p:PackageVersion=${{ steps.version.outputs.VERSION }}
 
     - name: Upload nupkg to github releases
       uses: svenstaro/upload-release-action@v2
       with:
-          body: "" # TODO:
+          body: ""
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./publish/*
           release_name: Release ${{ steps.version.outputs.VERSION }}
           tag: Release_${{ steps.version.outputs.VERSION }}
           file_glob: true
           overwrite: true
-
-    # Add nuget publish step
+          
+#    - name: Publish to nuget
+#      run: dotnet nuget push ./publish/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+      
