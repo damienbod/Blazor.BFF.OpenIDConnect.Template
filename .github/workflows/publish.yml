@@ -41,5 +41,5 @@ jobs:
           overwrite: true
           
     - name: Publish to nuget
-      run: dotnet nuget push ./publish/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./publish/Blazor.BFF.OpenIDConnect.Template.${{ steps.version.outputs.VERSION }}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
       
