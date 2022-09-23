@@ -2,6 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2022-09-23** 1.2.8
+- Updated packages
+- build pipeline
+
 **2022-08-26** 1.2.7
 - Http port generator param added
 - new template creation
