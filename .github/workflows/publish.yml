@@ -40,6 +40,6 @@ jobs:
           file_glob: true
           overwrite: true
           
-#    - name: Publish to nuget
-#      run: dotnet nuget push ./publish/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+    - name: Publish to nuget
+      run: dotnet nuget push ./publish/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
       
