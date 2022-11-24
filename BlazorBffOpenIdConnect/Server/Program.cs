@@ -57,7 +57,7 @@ else
 
 app.UseSecurityHeaders(
     SecurityHeadersDefinitions.GetHeaderPolicyCollection(env.IsDevelopment(),
-        configuration["OpenIDConnectSettings:Authority"]));
+        configuration["OpenIDConnectSettings:Authority"]!));
 
 app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
