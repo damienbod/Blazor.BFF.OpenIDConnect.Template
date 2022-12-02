@@ -8,7 +8,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 
 ## Features
 
-- WASM hosted in ASP.NET Core 6
+- WASM hosted in ASP.NET Core 7
 - BFF with OpenID Connect
 - OAuth2 and OpenID Connect OIDC
 - No tokens in the browser
@@ -61,7 +61,7 @@ dotnet new -u Blazor.BFF.OpenIDConnect.Template
 https://docs.microsoft.com/en-us/dotnet/core/tutorials/create-custom-template
 
 ```
-dotnet pack -o ./publish -c Release -p:PackageVersion=1.2.8 --no-build
+dotnet pack -o ./publish -c Release -p:PackageVersion=1.2.9 --no-build
 ```
 
 ### install developement
@@ -69,7 +69,7 @@ dotnet pack -o ./publish -c Release -p:PackageVersion=1.2.8 --no-build
 Locally built nupkg:
 
 ```
-dotnet new -i Blazor.BFF.OpenIDConnect.Template.1.2.8.nupkg
+dotnet new -i Blazor.BFF.OpenIDConnect.Template.1.2.9.nupkg
 ```
 
 Local folder:
@@ -81,7 +81,7 @@ dotnet new -i <PATH>
 Where `<PATH>` is the path to the folder containing .template.config.
 
 
-## Credits, Used NuGet packages + ASP.NET Core 6.0 standard packages
+## Credits, Used NuGet packages + ASP.NET Core 7.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
 
