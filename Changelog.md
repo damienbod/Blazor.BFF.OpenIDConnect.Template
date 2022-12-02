@@ -2,7 +2,7 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
-**2022-11-24** 1.2.9
+**2022-12-02** 2.0.0
 - Updated packages
 - update to dotnet 7
 
