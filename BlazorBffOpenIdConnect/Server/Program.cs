@@ -1,6 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
-
-var builder = WebApplication.CreateBuilder(args);
+﻿var builder = WebApplication.CreateBuilder(args);
 
 var services = builder.Services;
 var configuration = builder.Configuration;
