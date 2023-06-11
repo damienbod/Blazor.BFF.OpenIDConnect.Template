@@ -7,8 +7,8 @@ public class DirectApiModule : ICarterModule
         var group = app.MapGroup("api/DirectApi");
 
         group.MapGet("/", Get)
-            .RequireAuthorization()
-            .ValidateAntiforgery();
+             .RequireAuthorization()
+             .ValidateAntiforgery();
     }
 
     public IEnumerable<string> Get() => new List<string> { "some data", "more data", "loads of data" };
