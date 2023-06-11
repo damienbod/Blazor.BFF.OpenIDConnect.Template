@@ -8,7 +8,7 @@ services.AddAntiforgery(options =>
 {
     options.HeaderName = AntiforgeryDefaults.HeaderName;
     options.Cookie.Name = AntiforgeryDefaults.CookieName;
-    options.Cookie.SameSite = SameSiteMode.Strict;
+    options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Strict;
     options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
 });
 
@@ -37,16 +37,9 @@ services.AddAuthentication(options =>
     };
 });
 
-services.AddControllersWithViews(options =>
-     options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute()));
-
-services.AddRazorPages().AddMvcOptions(options =>
-{
-    //var policy = new AuthorizationPolicyBuilder()
-    //    .RequireAuthenticatedUser()
-    //    .Build();
-    //options.Filters.Add(new AuthorizeFilter(policy));
-});
+services.AddHttpContextAccessor();
+services.AddRazorPages();
+services.AddCarter();
 
 var app = builder.Build();
 
@@ -75,8 +68,7 @@ app.UseNoUnauthorizedRedirect("/api");
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapRazorPages();
-app.MapControllers();
+app.MapCarter();
 app.MapNotFound("/api/{**segment}");
 app.MapFallbackToPage("/_Host");
 
