@@ -12,9 +12,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.3" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.3" NoWarn="NU1605" />
-		<PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" Version="0.18.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="7.0.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.8" NoWarn="NU1605" />
+		<PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" Version="0.19.0" />
 	</ItemGroup>
 
 </Project>
