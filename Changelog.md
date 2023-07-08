@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2023-07-08** 2.0.3
+- Updated packages
+
 **2023-03-11** 2.0.2
 - Fix security headers, use on app requests including API calls
 - Updated packages
