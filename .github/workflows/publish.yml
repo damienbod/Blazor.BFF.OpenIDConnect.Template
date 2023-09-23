@@ -5,29 +5,30 @@ on:
   
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 7.0.*
-        include-prerelease: True
+      uses: actions/setup-dotnet@v3
 
     - name: Build Blazor template
       run: dotnet build ./BlazorBffOpenIdConnect/
 
-    - id: version
-      name: Get release version
-      run: |
-        value=`cat ReleaseVersion`
-        echo ::set-output name=VERSION::$value
-      shell: bash
+    - name: Create SemVer
+      uses: PaulHatch/semantic-version@v5.2.1
+      id: version
+      with:
+        tag_prefix: "Release_"
+        major_pattern: "(MAJOR)"
+        minor_pattern: "(MINOR)"
+        version_format: "${major}.${minor}.${patch}"
         
     - name: Pack
-      run: dotnet pack -o ./publish -p:PackageVersion=${{ steps.version.outputs.VERSION }}
+      run: dotnet pack -o ./publish -p:PackageVersion=${{ steps.version.outputs.version }}
 
     - name: Upload nupkg to github releases
       uses: svenstaro/upload-release-action@v2
@@ -35,11 +36,10 @@ jobs:
           body: ""
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./publish/*
-          release_name: Release ${{ steps.version.outputs.VERSION }}
-          tag: Release_${{ steps.version.outputs.VERSION }}
+          release_name: Release ${{ steps.version.outputs.version }}
+          tag: Release_${{ steps.version.outputs.version }}
           file_glob: true
           overwrite: true
           
     - name: Publish to nuget
-      run: dotnet nuget push ./publish/Blazor.BFF.OpenIDConnect.Template.${{ steps.version.outputs.VERSION }}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
-      
+      run: dotnet nuget push ./publish/Blazor.BFF.OpenIDConnect.Template.${{ steps.version.outputs.version }}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json 
