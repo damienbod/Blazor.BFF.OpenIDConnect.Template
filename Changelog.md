@@ -2,6 +2,10 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2023-09-23** 2.1.0
+- Updated publish build
+- Updated packages
+
 **2023-08-06** 2.0.4
 - Anti Forgery bugfix on init
 
