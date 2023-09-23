@@ -94,3 +94,5 @@ https://auth0.com/
 https://www.keycloak.org/
 
 https://github.com/andrewlock/NetEscapades.AspNetCore.SecurityHeaders
+
+https://github.com/PaulHatch/semantic-version
