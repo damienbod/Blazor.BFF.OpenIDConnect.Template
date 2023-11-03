@@ -6,7 +6,6 @@
 - Updated packages
 - Removed XSS block security header
 
-
 **2023-10-25** 2.1.2
 - Updated packages
 
