@@ -2,6 +2,11 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2023-11-03** 2.1.3
+- Updated packages
+- Removed XSS block security header
+
+
 **2023-10-25** 2.1.2
 - Updated packages
 
