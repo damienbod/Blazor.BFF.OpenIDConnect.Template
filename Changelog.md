@@ -2,7 +2,7 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
-**2023-11-03** 3.0.0
+**2023-11-25** 3.0.0
 - Updated packages
 - Update to dotnet 8
 - Use new primary constructors
