@@ -16,7 +16,7 @@
         <NoDefaultExcludes>true</NoDefaultExcludes>
         <PackageIcon>icon.png</PackageIcon>
         <PackageProjectUrl>https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template</PackageProjectUrl>
-        <Copyright>2022 damienbod</Copyright>
+        <Copyright>2023 damienbod</Copyright>
         <PackageReadmeFile>README-NUGET.md</PackageReadmeFile>
         <RepositoryUrl>https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template</RepositoryUrl>
         <PackageReleaseNotes>New template, support for HTTP port parameter</PackageReleaseNotes>
