@@ -8,7 +8,7 @@ namespace BlazorBffOpenIDConnect.Server.Controllers;
 public class AccountController : ControllerBase
 {
     [HttpGet("Login")]
-    public ActionResult Login(string returnUrl) => Challenge(new AuthenticationProperties
+    public ActionResult Login(string? returnUrl) => Challenge(new AuthenticationProperties
     {
         RedirectUri = !string.IsNullOrEmpty(returnUrl) ? returnUrl : "/"
     });
