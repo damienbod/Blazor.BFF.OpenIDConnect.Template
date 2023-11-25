@@ -4,6 +4,7 @@ namespace BlazorBffOpenIDConnect.Server.Controllers;
 
 // orig src https://github.com/berhir/BlazorWebAssemblyCookieAuth
 [Route("api/[controller]")]
+[ApiController]
 public class AccountController : ControllerBase
 {
     [HttpGet("Login")]
