@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2023-12-31** 3.0.1
+- Open redirect protection on login
+
 **2023-11-25** 3.0.0
 - Updated packages
 - Update to dotnet 8
