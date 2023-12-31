@@ -8,10 +8,7 @@ namespace BlazorBffOpenIDConnect.Server.Controllers;
 public class AccountController : ControllerBase
 {
     [HttpGet("Login")]
-    public ActionResult Login(string? returnUrl) => Challenge(new AuthenticationProperties
-    {
-        RedirectUri = !string.IsNullOrEmpty(returnUrl) ? returnUrl : "/"
-    });
+    public ActionResult Login(string? returnUrl) => Challenge(GetAuthProperties(returnUrl));
 
     [ValidateAntiForgeryToken]
     [Authorize]
@@ -22,4 +19,29 @@ public class AccountController : ControllerBase
     },
     CookieAuthenticationDefaults.AuthenticationScheme,
     OpenIdConnectDefaults.AuthenticationScheme);
+
+    /// <summary>
+    /// Original src:
+    /// https://github.com/dotnet/blazor-samples/blob/main/8.0/BlazorWebOidc/BlazorWebOidc/LoginLogoutEndpointRouteBuilderExtensions.cs
+    /// </summary>
+    private static AuthenticationProperties GetAuthProperties(string? returnUrl)
+    {
+        const string pathBase = "/";
+
+        // Prevent open redirects.
+        if (string.IsNullOrEmpty(returnUrl))
+        {
+            returnUrl = pathBase;
+        }
+        else if (!Uri.IsWellFormedUriString(returnUrl, UriKind.Relative))
+        {
+            returnUrl = new Uri(returnUrl, UriKind.Absolute).PathAndQuery;
+        }
+        else if (returnUrl[0] != '/')
+        {
+            returnUrl = $"{pathBase}{returnUrl}";
+        }
+
+        return new AuthenticationProperties { RedirectUri = returnUrl };
+    }
 }
