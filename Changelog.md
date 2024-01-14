@@ -2,6 +2,12 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+
+**2024-01-14** 3.0.2
+- Improve CSP, using nonce
+- updated packages
+
+
 **2023-12-31** 3.0.1
 - Open redirect protection on login
 
