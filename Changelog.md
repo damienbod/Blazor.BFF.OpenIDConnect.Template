@@ -2,6 +2,8 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2024-02-01** 3.0.3
+- Fix refresh bug
 
 **2024-01-14** 3.0.2
 - Improve CSP, using nonce
