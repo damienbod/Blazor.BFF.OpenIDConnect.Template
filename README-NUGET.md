@@ -16,7 +16,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 ### install
 
 ```
-dotnet new -i Blazor.BFF.OpenIDConnect.Template
+dotnet new install Blazor.BFF.OpenIDConnect.Template
 ```
 
 ### run
@@ -44,7 +44,7 @@ Add the OpenID Connect App registration settings
 ### uninstall
 
 ```
-dotnet new -u Blazor.BFF.OpenIDConnect.Template
+dotnet new uninstall Blazor.BFF.OpenIDConnect.Template
 ```
 
 
