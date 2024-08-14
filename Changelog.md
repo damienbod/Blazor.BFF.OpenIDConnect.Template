@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2024-08-14** 3.0.4
+- Updated packages
+
 **2024-02-01** 3.0.3
 - Fix refresh bug
 
