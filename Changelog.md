@@ -2,6 +2,9 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
+**2024-10-07** 3.0.5
+- Updated security headers package
+
 **2024-08-14** 3.0.4
 - Updated packages
 
