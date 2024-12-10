@@ -6,7 +6,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 
 ## Features
 
-- WASM hosted in ASP.NET Core 8
+- WASM hosted in ASP.NET Core 9
 - BFF (backend for frontend) with Standard OpenID Connect
 - OAuth2 and OpenID Connect OIDC
 - No tokens in the browser
@@ -48,7 +48,7 @@ dotnet new uninstall Blazor.BFF.OpenIDConnect.Template
 ```
 
 
-## Credits, Used NuGet packages + ASP.NET Core 8.0 standard packages
+## Credits, Used NuGet packages + ASP.NET Core 9.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
 
