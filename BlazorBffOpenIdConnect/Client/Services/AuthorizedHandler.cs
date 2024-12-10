@@ -1,7 +1,7 @@
 ﻿namespace BlazorBffOpenIDConnect.Client.Services;
 
 // orig src https://github.com/berhir/BlazorWebAssemblyCookieAuth
-public class AuthorizedHandler(HostAuthenticationStateProvider authenticationStateProvider) 
+public class AuthorizedHandler(HostAuthenticationStateProvider authenticationStateProvider)
     : DelegatingHandler
 {
     protected override async Task<HttpResponseMessage> SendAsync(

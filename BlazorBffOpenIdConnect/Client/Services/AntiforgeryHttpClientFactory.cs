@@ -1,6 +1,6 @@
 ﻿namespace BlazorBffOpenIDConnect.Client.Services;
 
-public class AntiforgeryHttpClientFactory(IHttpClientFactory httpClientFactory, IJSRuntime jSRuntime) 
+public class AntiforgeryHttpClientFactory(IHttpClientFactory httpClientFactory, IJSRuntime jSRuntime)
     : IAntiforgeryHttpClientFactory
 {
     public async Task<HttpClient> CreateClientAsync(string clientName = AuthDefaults.AuthorizedClientName)
