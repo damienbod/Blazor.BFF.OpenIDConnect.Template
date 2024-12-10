@@ -2,7 +2,7 @@
 
 [Readme](https://github.com/damienbod/Blazor.BFF.OpenIDConnect.Template/blob/main/README.md) 
 
-**2024-12-10** 4.0.0
+**2024-12-10** 3.0.7
 - .NET 9
 
 **2024-10-07** 3.0.5
