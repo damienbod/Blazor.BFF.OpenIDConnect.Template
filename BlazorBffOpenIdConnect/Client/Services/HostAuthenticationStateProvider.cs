@@ -1,7 +1,7 @@
 ﻿namespace BlazorBffOpenIDConnect.Client.Services;
 
 // orig src https://github.com/berhir/BlazorWebAssemblyCookieAuth
-public class HostAuthenticationStateProvider(NavigationManager navigation, HttpClient client, ILogger<HostAuthenticationStateProvider> logger) 
+public class HostAuthenticationStateProvider(NavigationManager navigation, HttpClient client, ILogger<HostAuthenticationStateProvider> logger)
     : AuthenticationStateProvider
 {
     private static readonly TimeSpan userCacheRefreshInterval = TimeSpan.FromSeconds(60);

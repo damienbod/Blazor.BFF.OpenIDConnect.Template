@@ -8,7 +8,7 @@ This template can be used to create a Blazor WASM application hosted in an ASP.N
 
 ## Features
 
-- WASM hosted in ASP.NET Core 8
+- WASM hosted in ASP.NET Core 9
 - BFF with OpenID Connect
 - OAuth2 and OpenID Connect OIDC
 - No tokens in the browser
@@ -81,7 +81,7 @@ dotnet new install <PATH>
 Where `<PATH>` is the path to the folder containing .template.config.
 
 
-## Credits, Used NuGet packages + ASP.NET Core 8.0 standard packages
+## Credits, Used NuGet packages + ASP.NET Core 9.0 standard packages
 
 - NetEscapades.AspNetCore.SecurityHeaders
 
